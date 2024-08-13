@@ -41,7 +41,7 @@ export class LoginComponent {
   onNext(){
     console.log('clicked login');
     if(!this.email || !this.password){
-      this.errorMessage = 'Enter email and username';
+      this.errorMessage = 'Enter email and password';
       return;
     }
     this.isLoading = true;
