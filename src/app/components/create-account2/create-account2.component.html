@@ -1,0 +1,46 @@
+
+<div class="welcome-container">
+  <div class="welcome">
+    <div class="img-container">
+      <img src="../../../assets/image1.png" alt="img">
+    </div>
+    <div class="form-container">
+      <div class="goback" (click)="goBack($event)">Go Back</div>
+      <h4>Create Account</h4>
+      <div class="progress-bar-cont">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div>
+        <p>Organisation-name</p>
+        <input placeholder="Enter organisation name" (change)="handleOrgName($event)" type="text" value={{orgName}}>
+      </div>
+      <div>
+        <p>Organisation-id</p>
+        <input placeholder="Enter organisation id" (change)="handleOrgId($event)" value={{orgId}}>
+      </div>
+      <div>
+        <p>Designation</p>
+        <input placeholder="Designation" type="text" (change)="handleDesignation($event)" type="text" value={{designation}}>
+      </div>
+      <div>
+        <p>Birth-Date</p>
+        <input placeholder="Birth Date" type="date" (change)="handleDob($event)" value={{dob}}>
+      </div>
+      <div class="city-pin">
+        <div class="city">
+          <p>City</p>
+          <input placeholder="City Name" type="text" (change)="handleCity($event)" value={{city}}>
+        </div>
+        <div class="city">
+          <p>Pincode</p>
+          <input placeholder="Pincode" type="number" (change)="handlePincode($event)" value={{pincode}}>
+        </div>
+      </div>
+      <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+      <button (click)="onNext()">Next</button>
+    </div>
+  </div>
+</div>
+
+

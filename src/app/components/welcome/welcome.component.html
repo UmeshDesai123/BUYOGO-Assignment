@@ -1,0 +1,23 @@
+<app-loading [isLoading]="isLoading"></app-loading>
+<div class="welcome-container">
+  <div class="welcome">
+    <div class="img-container">
+      <img src="../../../assets/image1.png" alt="img">
+    </div>
+    <div class="form-container">
+      <h4>welcome</h4>
+      <div>
+        <p>Enter email</p>
+        <input (change)="handleEmail($event)" [disabled]="mob" value={{email}} placeholder="Enter email" value={{email}}>
+      </div>
+      <p class="or">(OR)</p>
+      <div>
+        <p>Enter Mobile No.</p>
+        <input [disabled]="email"  type="number" (change)="handleMob($event)" placeholder="91+">
+      </div>
+      <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+      <button (click)="handleNext()" (keydown.enter)="handleNext()">Next</button>
+      <p class="new-user" *ngIf="errorMessage === 'User does not exist.'" (click)="createAcc($event)">Click here to create new account</p>
+    </div>
+  </div>
+</div>

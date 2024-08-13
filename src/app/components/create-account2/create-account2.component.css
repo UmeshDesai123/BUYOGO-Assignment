@@ -1,0 +1,129 @@
+.welcome-container{
+  background-color: rgb(124, 166, 215);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(130deg, rgb(124, 166, 215), rgb(217, 230, 241));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .welcome{
+    width: 59vw;
+    height: 90vh;
+    background-color: rgb(245 ,245, 245);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    .img-container{
+      width: 38%;
+      height: 100%;
+      border-radius: 15px 0px 0px 15px;
+
+      img{
+        height: 100%;
+        width: 100%;
+        border-radius: 15px 0px 0px 15px;
+        object-fit: fill;
+      }
+    }
+
+    .form-container{
+      padding: 20px;
+      padding-top: 5px;
+      margin-top: 5px;
+      padding-left: 50px;
+      width: 62%;
+      
+      .goback{
+        color: rgb(0, 105, 209);
+        padding-top: 5px;
+        margin-bottom: 10px;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      h4{
+        margin-bottom: 20px;
+        /* font-weight: 600; */
+      }
+      .progress-bar-cont{
+        display: flex;
+        gap: 10px;
+        width: 65%;
+
+        .bar{
+          height: 8px;
+          background-color: rgb(0, 105, 209);
+          border-radius: 4px;
+        }
+      }
+      p{
+        margin-bottom: 0px;
+        margin-top: 10px;
+        color: rgb(0, 105, 209);
+        font-weight: 500;
+      }
+
+      .error-message{
+        color: rgb(251, 52, 52);
+      }
+
+      div{
+        width: 100%;
+        input{
+          border-radius: 15px;
+          padding: 5px;
+          padding-left: 15px;
+          width: 65%;
+          background-color: rgb(228, 236, 238);
+          border: none;
+
+          &:focus{
+            outline: none;
+          }
+        }
+      }
+
+      .city-pin{
+        display: flex;
+        gap: 10%;
+        width: 65%;
+        justify-content: space-between !important;
+        /* border: 1px solid red; */
+        padding: 0;
+        margin: 0;
+        input{
+          width: 85%;
+        }
+
+        .pin{
+          /* border: 1px solid blueviolet; */
+          padding: 0;
+        margin-right: 0px;
+        }
+      }
+      
+      button{
+        width: 65%;
+        margin-top: 20px;
+        border-radius: 15px;
+        border: none;
+        background-color: rgb(0, 105, 209);
+        color: white;
+        padding: 5px 0px;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.error{
+  outline: 1px solid red;
+}
+
+

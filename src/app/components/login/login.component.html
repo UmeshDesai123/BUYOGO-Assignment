@@ -1,0 +1,22 @@
+<app-loading [isLoading]="isLoading"></app-loading>
+<div class="welcome-container">
+  <div class="welcome">
+    <div class="img-container">
+      <img src="../../../assets/image1.png" alt="img">
+    </div>
+    <div class="form-container">
+      <h4>welcome back, {{userName}}!</h4>
+      <div>
+        <p>Enter email</p>
+        <input placeholder="Enter email" (change)="handleEmail($event)" type="email" value={{email}}>
+      </div>
+      <div>
+        <p>Enter password</p>
+        <input (change)="handlePassword($event)" [ngClass]="{'passerror': errorMessage}" placeholder="password" type="password">
+        <p class="error-message" *ngIf="errorMessage === 'Incorrect Password'">{{errorMessage}}</p>
+      </div>
+      <p *ngIf="errorMessage === 'Enter email and username'" class="error-message">{{errorMessage}}</p>
+      <button (click)="onNext()">Next</button>
+    </div>
+  </div>
+</div>

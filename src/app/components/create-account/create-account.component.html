@@ -1,0 +1,30 @@
+
+<div class="welcome-container">
+  <div class="welcome">
+    <div class="img-container">
+      <img src="../../../assets/image1.png" alt="img">
+    </div>
+    <div class="form-container">
+      <h4>Create Account</h4>
+      <div class="progress-bar-cont">
+        <div class="bar"></div>
+        <div class="bar1 bar"></div>
+      </div>
+      <div>
+        <p>Enter email ID</p>
+        <input placeholder="loremipsum@gmail.com" (change)="handleEmail($event)" type="email" value={{email}}>
+      </div>
+      <div>
+        <p>Enter full name</p>
+        <input placeholder="full name" (change)="handleName($event)" type="text" value={{name}}>
+      </div>
+      <div>
+        <p>Create password</p>
+        <input (change)="handlePassword($event)" [ngClass]="{'passerror': errorMessage}" placeholder="password" type="password" value={{password}}>
+      </div>
+      <p *ngIf="errorMessage" class="error-message">{{errorMessage}}</p>
+      <button (click)="onNext()">Next</button>
+    </div>
+  </div>
+</div>
+
