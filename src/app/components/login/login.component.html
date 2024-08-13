@@ -15,7 +15,7 @@
         <input (change)="handlePassword($event)" [ngClass]="{'passerror': errorMessage}" placeholder="password" type="password">
         <p class="error-message" *ngIf="errorMessage === 'Incorrect Password'">{{errorMessage}}</p>
       </div>
-      <p *ngIf="errorMessage === 'Enter email and username'" class="error-message">{{errorMessage}}</p>
+      <p *ngIf="errorMessage === 'Enter email and password'" class="error-message">{{errorMessage}}</p>
       <button (click)="onNext()">Next</button>
     </div>
   </div>
